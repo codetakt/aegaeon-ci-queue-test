@@ -28,6 +28,9 @@ jobs:
     outputs:
       validate: ${{ steps.route.outputs.validate }}
     steps:
+      - name: Allow the operator to cancel the second attempt before its receipt
+        if: github.run_attempt == '2'
+        run: sleep 60
       - name: Preserve the native edit before selecting infrastructure checks
         uses: codetakt/aegaeon/.github/actions/record-pr-event@05ab287176ebd82476440ea90a2682f7a5acc4ac
       - name: Identify edits that need infrastructure validation

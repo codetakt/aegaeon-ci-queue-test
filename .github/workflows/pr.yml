@@ -307,7 +307,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           repository: codetakt/aegaeon
-          ref: c913ea75c5b4ca361721379623ef35d82525818e
+          ref: 23733086cc06c7e07af2c362799acee236a9c985
           path: group-validator
           sparse-checkout: scripts/ci
           persist-credentials: false
